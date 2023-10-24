@@ -4,11 +4,12 @@ import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.
 
 export default function PostSignUp() {
   let target_url =
-    "https://asia-southeast2-awangga.cloudfunctions.net/petapedia-post";
+    "https://asia-southeast2-nyoba-402410.cloudfunctions.net/warehouselogin";
   let tokenkey = "token";
-  let tokenvalue = "8e87pod9d9a8fh9sfd87f9dhsf98dsf98sdf9ssd98f";
+  let tokenvalue =
+    "5c633cfc6243cec8c9b5dae4a8aae7b366126ad04ee4e5a90c7596e7f8b9a9d8";
   let datainjson = {
-    username: getValue("username"),
+    email: getValue("email"),
     password: getValue("password"),
   };
 
