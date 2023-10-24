@@ -16,7 +16,7 @@ export default function PostSignUp() {
     confirmpass: getValue("confirmpass"),
   };
 
-  postWithToken(target_url, tokenkey, tokenvalue, datainjson, responseData);
+  postWithToken(target_url, datainjson, responseData);
 }
 
 function responseData(result) {
