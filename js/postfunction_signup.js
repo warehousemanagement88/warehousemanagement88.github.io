@@ -47,7 +47,7 @@ export default function PostSignUp() {
 }
 
 function responseData(result) {
-  if ((result.status = true)) {
+  if (result.status == true) {
     // Tampilkan SweetAlert berhasil signUp
     Swal.fire({
       icon: "success",
