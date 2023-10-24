@@ -1,7 +1,7 @@
 import { setInner, getValue } from "https://jscroot.github.io/element/croot.js";
 // import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-export default function postSignUp() {
+export default function PostSignUp() {
   firstname = getValue("isifirstname");
   lastname = getValue("isilastname");
   email = getValue("isiemail");
