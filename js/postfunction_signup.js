@@ -1,5 +1,4 @@
 import { setInner, getValue } from "https://jscroot.github.io/element/croot.js";
-// import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 export default function PostSignUp() {
   let firstname = getValue("isifirstname");
@@ -47,8 +46,7 @@ export default function PostSignUp() {
 }
 
 function responseData(result) {
-  if (result.status == true) {
-    // Tampilkan SweetAlert berhasil signUp
+  if (result.status === true) {
     Swal.fire({
       icon: "success",
       title: "SignUp Successful",
@@ -60,10 +58,11 @@ function responseData(result) {
       }
     });
   } else {
+    // Tampilkan SweetAlert ketika signup gagal
     Swal.fire({
       icon: "error",
       title: "Signup Failed",
-      text: result.message,
+      text: result.message || "An error occurred during signup.",
     });
   }
 }
