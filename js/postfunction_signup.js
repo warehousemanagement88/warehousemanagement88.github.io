@@ -2,11 +2,11 @@ import { setInner, getValue } from "https://jscroot.github.io/element/croot.js";
 // import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 export default function postSignUp() {
-  firstname = getValue("firstname");
-  lastname = getValue("lastname");
-  email = getValue("email");
-  password = getValue("password");
-  confirmpass = getValue("confirmpass");
+  firstname = getValue("isifirstname");
+  lastname = getValue("isilastname");
+  email = getValue("isiemail");
+  password = getValue("isipassword");
+  confirmpass = getValue("isiconfirmpass");
 
   // Validasi isian tidak boleh kosong
   if (!firstname || !lastname || !email || !password || !confirmpass) {
