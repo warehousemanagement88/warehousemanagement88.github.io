@@ -18,6 +18,9 @@ export default function PostSignUp() {
 
 function responseData(result) {
   //setInner("pesan", result.message);
+  console.log(result.message);
+  console.log(result.token);
+  console.log(result.status);
   setCookieWithExpireHour("token", result.token, 2);
   window.location.href =
     "https://warehousemanagement88.github.io/warehousesystem/template/dashboard.html";
