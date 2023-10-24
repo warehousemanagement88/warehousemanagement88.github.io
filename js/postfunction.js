@@ -1,6 +1,7 @@
 import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { setInner, getValue } from "https://jscroot.github.io/element/croot.js";
 import { setCookieWithExpireHour } from "https://jscroot.github.io/cookie/croot.js";
+import Swal from "sweetalert2";
 
 export default function PostSignIn() {
   let target_url =
@@ -12,6 +13,16 @@ export default function PostSignIn() {
     email: getValue("email"),
     password: getValue("password"),
   };
+
+  // Validasi isian tidak boleh kosong
+  if (!email || !password) {
+    Swal.fire({
+      icon: "error",
+      title: "Login Failed",
+      text: "Please fill in all fields.",
+    });
+    return;
+  }
 
   postWithToken(target_url, tokenkey, tokenvalue, datainjson, responseData);
 }
