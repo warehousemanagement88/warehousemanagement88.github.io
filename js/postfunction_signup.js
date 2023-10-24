@@ -2,21 +2,21 @@ import { setInner, getValue } from "https://jscroot.github.io/element/croot.js";
 // import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 export default function PostSignUp() {
-  firstname = getValue("isifirstname");
-  lastname = getValue("isilastname");
-  email = getValue("isiemail");
-  password = getValue("isipassword");
-  confirmpass = getValue("isiconfirmpass");
+  let firstname = getValue("isifirstname");
+  let lastname = getValue("isilastname");
+  let email = getValue("isiemail");
+  let password = getValue("isipassword");
+  let confirmpass = getValue("isiconfirmpass");
 
-  // Validasi isian tidak boleh kosong
-  if (!firstname || !lastname || !email || !password || !confirmpass) {
-    Swal.fire({
-      icon: "error",
-      title: "Signup Failed",
-      text: "Please fill in all fields.",
-    });
-    return;
-  }
+  // // Validasi isian tidak boleh kosong
+  // if (!let firstname || !lastname || !email || !password || !confirmpass) {
+  //   Swalet l.fire({
+  //     ilet con: "error",
+  //     tlet itle: "Signup Failed",
+  //     tlet ext: "Please fill in all fields.",
+  //   });
+  //   return;
+  // }
 
   let target_url =
     "https://asia-southeast2-nyoba-402410.cloudfunctions.net/warehousesignup";
