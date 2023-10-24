@@ -8,16 +8,6 @@ export default function PostSignUp() {
   let password = getValue("isipassword");
   let confirmpass = getValue("isiconfirmpass");
 
-  // // Validasi isian tidak boleh kosong
-  // if (!let firstname || !lastname || !email || !password || !confirmpass) {
-  //   Swalet l.fire({
-  //     ilet con: "error",
-  //     tlet itle: "Signup Failed",
-  //     tlet ext: "Please fill in all fields.",
-  //   });
-  //   return;
-  // }
-
   let target_url =
     "https://asia-southeast2-nyoba-402410.cloudfunctions.net/warehousesignup";
   let datainjson = {
