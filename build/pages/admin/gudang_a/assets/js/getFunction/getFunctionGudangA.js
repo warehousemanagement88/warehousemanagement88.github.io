@@ -54,7 +54,7 @@ export function responseData(results) {
 
 export function isiRow(value) {
   const gudanga = tableGudangA
-    .replace("#NAMA#", value.gudanga.nama)
+    .replace("#NAMA#", value.gudanga.name)
     .replace("#CATEGORY#", value.gudanga.category)
     .replace("#QTY#", value.gudanga.qty)
     .replace("#SKU#", value.gudanga.sku)
