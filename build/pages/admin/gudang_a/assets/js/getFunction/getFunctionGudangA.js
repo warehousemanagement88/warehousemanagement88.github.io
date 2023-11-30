@@ -1,4 +1,5 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { convertToWIB } from "./convertToWib.js";
 
 export const URLGetGudangA =
   "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudanga";
@@ -56,6 +57,7 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
+  const wibCreated = convertToWIB(value.createdat);
   const gudanga = tableGudangA
     .replace("#NAME#", value.name)
     .replace("#CATEGORY#", value.category)
@@ -67,7 +69,7 @@ export function isiRow(value) {
     .replace("#COLOR#", value.color)
     .replace("#BREADCRUMBS#", value.breadcrumbs)
     .replace("#BRAND#", value.brand)
-    .replace("#DATE#", value.date)
+    .replace("#DATE#", wibCreated)
     .replace("#EDIT#", value._id)
     .replace("#DELETE#", value._id);
   addInner("tableGudangA", gudanga);
