@@ -38,6 +38,9 @@ export const tableGudangA = `
   <span class="text-xs font-semibold leading-tight text-slate-400">#BREADCRUMBS#</span>
 </td>
 <td class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
+  <span class="text-xs font-semibold leading-tight text-slate-400">#BRAND#</span>
+</td>
+<td class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
   <span class="text-xs font-semibold leading-tight text-slate-400">#DATE#</span>
 </td>
 <td class="p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
@@ -63,6 +66,7 @@ export function isiRow(value) {
     .replace("#AVAILABILITY#", value.gudanga.availability)
     .replace("#COLOR#", value.gudanga.color)
     .replace("#BREADCRUMBS#", value.gudanga.breadcrumbs)
+    .replace("#BRAND#", value.gudanga.brand)
     .replace("#DATE#", value.gudanga.date)
     .replace("#EDIT#", value._id)
     .replace("#DELETE#", value._id);
