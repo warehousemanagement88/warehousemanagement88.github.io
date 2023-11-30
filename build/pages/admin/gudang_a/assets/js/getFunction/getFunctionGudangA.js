@@ -57,7 +57,7 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  const wibCreated = convertToWIB(value.createdat);
+  const wibCreated = convertToWIB(value.date);
   const gudanga = tableGudangA
     .replace("#NAME#", value.name)
     .replace("#CATEGORY#", value.category)
