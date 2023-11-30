@@ -57,17 +57,17 @@ export function responseData(results) {
 
 export function isiRow(value) {
   const gudanga = tableGudangA
-    .replace("#NAMA#", value.gudanga.name)
-    .replace("#CATEGORY#", value.gudanga.category)
-    .replace("#QTY#", value.gudanga.qty)
-    .replace("#SKU#", value.gudanga.sku)
-    .replace("#SELLINGPRICE#", value.gudanga.sellingprice)
-    .replace("#ORIGINALPRICE#", value.gudanga.originalprice)
-    .replace("#AVAILABILITY#", value.gudanga.availability)
-    .replace("#COLOR#", value.gudanga.color)
-    .replace("#BREADCRUMBS#", value.gudanga.breadcrumbs)
-    .replace("#BRAND#", value.gudanga.brand)
-    .replace("#DATE#", value.gudanga.date)
+    .replace("#NAMA#", value.name)
+    .replace("#CATEGORY#", value.category)
+    .replace("#QTY#", value.qty)
+    .replace("#SKU#", value.sku)
+    .replace("#SELLINGPRICE#", value.sellingprice)
+    .replace("#ORIGINALPRICE#", value.originalprice)
+    .replace("#AVAILABILITY#", value.availability)
+    .replace("#COLOR#", value.color)
+    .replace("#BREADCRUMBS#", value.breadcrumbs)
+    .replace("#BRAND#", value.brand)
+    .replace("#DATE#", value.date)
     .replace("#EDIT#", value._id)
     .replace("#DELETE#", value._id);
   addInner("tableGudangA", gudanga);
