@@ -1,7 +1,7 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const deleteGudangB = async (IDHAPUS) => {
-  const gudangbId = IDHAPUS;
+const deleteGudangC = async (IDHAPUS) => {
+  const gudangcId = IDHAPUS;
   const authorizationToken = getCookie("Authorization");
 
   const isConfirmed = await Swal.fire({
