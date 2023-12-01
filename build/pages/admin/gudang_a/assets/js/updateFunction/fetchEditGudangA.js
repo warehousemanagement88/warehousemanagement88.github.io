@@ -1,4 +1,4 @@
-import { isiData } from "./editPembimbing.js";
+import { isiData } from "./editGudangA.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { urlFetch } from "./urlEditGudangA.js";
 
