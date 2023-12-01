@@ -25,7 +25,7 @@ const PostSignIn = () => {
     "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_login";
   const datainjson = {
     email: getValue("email"),
-    password: getValue("hs-toggle-password"),
+    password: getValue("password"),
   };
 
   postWithToken(target_url, datainjson, responseData);
