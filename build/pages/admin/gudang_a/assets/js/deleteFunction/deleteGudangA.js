@@ -10,7 +10,7 @@ const deleteGudangA = async (IDHAPUS) => {
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
     cancelButtonColor: "#d33",
-    confirmButtonText: "Ya, Batalkan!",
+    confirmButtonText: "Ya, Hapus!",
     cancelButtonText: "Batal",
   });
 
