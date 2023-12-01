@@ -1,6 +1,6 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { urlPUT, AmbilResponse } from "./urlPutGudangA.js";
+import { urlPUT, AmbilResponse } from "./urlPutGudangC.js";
 
 const putData = (target_url, datajson, responseFunction) => {
   const myHeaders = new Headers();

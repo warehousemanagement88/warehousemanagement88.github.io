@@ -1,10 +1,12 @@
-import { URLGetGudangA, responseData } from "./getFunctionGudangA.js";
+import { isiData } from "./editGudangC.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
+import { urlFetch } from "./urlEditGudangC.js";
 
-const get = (target_url, responseFunction) => {
+function get(target_url, responseFunction) {
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
-  const requestOptions = {
+
+  var requestOptions = {
     method: "GET",
     headers: myHeaders,
     redirect: "follow",
@@ -13,9 +15,6 @@ const get = (target_url, responseFunction) => {
   fetch(target_url, requestOptions)
     .then((response) => response.text())
     .then((result) => responseFunction(JSON.parse(result)))
-    .catch((error) => {
-      console.log("error", error);
-    });
-};
-
-get(URLGetGudangA, responseData);
+    .catch((error) => console.log("error", error));
+}
+get(urlFetch, isiData);

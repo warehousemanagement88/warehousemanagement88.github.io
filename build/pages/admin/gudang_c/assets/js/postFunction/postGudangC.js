@@ -2,9 +2,9 @@ import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const PostGudangA = () => {
+const PostGudangC = () => {
   const target_url =
-    "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudanga";
+    "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudangc";
   const tokenvalue = getCookie("Authorization");
   const tokenkey = "Authorization";
   const datainjson = {
@@ -41,4 +41,4 @@ const responseData = (result) => {
   }
 };
 
-window.PostGudangA = PostGudangA;
+window.PostGudangC = PostGudangC;

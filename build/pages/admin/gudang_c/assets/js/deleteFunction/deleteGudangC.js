@@ -1,11 +1,11 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const deleteGudangA = async (IDHAPUS) => {
-  const gudangaId = IDHAPUS;
+const deleteGudangB = async (IDHAPUS) => {
+  const gudangbId = IDHAPUS;
   const authorizationToken = getCookie("Authorization");
 
   const isConfirmed = await Swal.fire({
-    title: "Apakah anda ingin menghapus data Gudang A?",
+    title: "Apakah anda ingin menghapus data Gudang C?",
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
@@ -19,8 +19,8 @@ const deleteGudangA = async (IDHAPUS) => {
     myHeaders.append("Authorization", authorizationToken);
 
     const target_url =
-      "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudanga?id=" +
-      gudangaId;
+      "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudangc?id=" +
+      gudangcId;
 
     try {
       const response = await fetch(target_url, {
@@ -32,7 +32,7 @@ const deleteGudangA = async (IDHAPUS) => {
       if (response.ok) {
         await Swal.fire({
           icon: "success",
-          title: "Berhasil Hapus Data Gudang A",
+          title: "Berhasil Hapus Data Gudang C",
           showConfirmButton: false,
           timer: 1500,
         });
@@ -46,4 +46,4 @@ const deleteGudangA = async (IDHAPUS) => {
   }
 };
 
-window.deleteGudangA = deleteGudangA;
+window.deleteGudangC = deleteGudangC;

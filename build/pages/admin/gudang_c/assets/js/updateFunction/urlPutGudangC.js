@@ -1,9 +1,9 @@
 const urlParams = new URLSearchParams(window.location.search);
-const gudangaId = urlParams.get("gudangaId");
+const gudangcId = urlParams.get("gudangcId");
 
 export const urlPUT =
-  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudanga?id=" +
-  gudangaId;
+  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudangc?id=" +
+  gudangcId;
 
 export const AmbilResponse = (result) => {
   if (result.status) {
@@ -14,7 +14,7 @@ export const AmbilResponse = (result) => {
       showConfirmButton: false,
       timer: 1500,
     }).then(() => {
-      window.location.href = "tables_GudangA.html";
+      window.location.href = "tables_GudangC.html";
     });
   } else {
     Swal.fire({
