@@ -120,7 +120,7 @@
                   <div class="w-3/12 max-w-full px-1 ml-auto flex-0"></div>
                 </div>
                 <div class="flex-auto p-6">
-                  <form role="form text-left">
+                  <div>
                     <div class="mb-4">
                       <span class="text-gray-700 dark:text-gray-400">Name</span>
                       <input
@@ -129,6 +129,7 @@
                         placeholder="Name"
                         aria-label="Name"
                         aria-describedby="name-addon"
+                        id="name"
                       />
                     </div>
                     <div class="mb-4">
@@ -141,6 +142,18 @@
                         placeholder="Category"
                         aria-label="Category"
                         aria-describedby="category-addon"
+                        id="category"
+                      />
+                    </div>
+                    <div class="mb-4">
+                      <span class="text-gray-700 dark:text-gray-400">QTY</span>
+                      <input
+                        type="text"
+                        class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
+                        placeholder="QTY"
+                        aria-label="QTY"
+                        aria-describedby="qty-addon"
+                        id="qty"
                       />
                     </div>
                     <div class="mb-4">
@@ -151,6 +164,7 @@
                         placeholder="SKU"
                         aria-label="SKU"
                         aria-describedby="sku-addon"
+                        id="sku"
                       />
                     </div>
                     <div class="mb-4">
@@ -163,6 +177,7 @@
                         placeholder="Selling Price"
                         aria-label="SellingPrice"
                         aria-describedby="sellingprice-addon"
+                        id="sellingprice"
                       />
                     </div>
                     <div class="mb-4">
@@ -175,6 +190,7 @@
                         placeholder="Original Price"
                         aria-label="OriginalPrice"
                         aria-describedby="originalprice-addon"
+                        id="originalprice"
                       />
                     </div>
                     <div class="mb-4">
@@ -187,18 +203,7 @@
                         placeholder="Availability"
                         aria-label="Availability"
                         aria-describedby="availability-addon"
-                      />
-                    </div>
-                    <div class="mb-4">
-                      <span class="text-gray-700 dark:text-gray-400"
-                        >Availability</span
-                      >
-                      <input
-                        type="text"
-                        class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
-                        placeholder="Availability"
-                        aria-label="Availability"
-                        aria-describedby="availability-addon"
+                        id="availability"
                       />
                     </div>
                     <div class="mb-4">
@@ -211,6 +216,7 @@
                         placeholder="Color"
                         aria-label="Color"
                         aria-describedby="color-addon"
+                        id="color"
                       />
                     </div>
                     <div class="mb-4">
@@ -223,12 +229,27 @@
                         placeholder="Breadcrumbs"
                         aria-label="Breadcrumbs"
                         aria-describedby="breadcrumbs-addon"
+                        id="breadcrumbs"
+                      />
+                    </div>
+                    <div class="mb-4">
+                      <span class="text-gray-700 dark:text-gray-400"
+                        >Brand</span
+                      >
+                      <input
+                        type="text"
+                        class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
+                        placeholder="Brand"
+                        aria-label="Brand"
+                        aria-describedby="brand-addon"
+                        id="brand"
                       />
                     </div>
 
                     <div class="text-center">
                       <button
-                        type="button"
+                        type="submit"
+                        id="updateButton"
                         class="inline-block px-6 py-3 mt-6 mb-2 font-bold text-center text-white uppercase align-middle transition-all bg-transparent border-0 rounded-lg cursor-pointer active:opacity-85 hover:scale-102 hover:shadow-soft-xs leading-pro text-xs ease-soft-in tracking-tight-soft shadow-soft-md bg-150 bg-x-25 bg-gradient-to-tl from-gray-900 to-slate-800 hover:border-slate-700 hover:bg-slate-700 hover:text-white"
                       >
                         Edit
@@ -259,5 +280,9 @@
   <script
     src="../../../assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5"
     async
+  ></script>
+  <script
+    type="module"
+    src="../../admin/gudang_a/assets/js/updateFunction/updateGudangA.js"
   ></script>
 </html>
