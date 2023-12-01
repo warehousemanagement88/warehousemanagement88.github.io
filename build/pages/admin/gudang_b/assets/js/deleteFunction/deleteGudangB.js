@@ -32,7 +32,7 @@ const deleteGudangB = async (IDHAPUS) => {
       if (response.ok) {
         await Swal.fire({
           icon: "success",
-          title: "Berhasil Hapus Data Gudang A",
+          title: "Berhasil Hapus Data Gudang B",
           showConfirmButton: false,
           timer: 1500,
         });
