@@ -1,10 +1,10 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { convertToWIB } from "./convertToWib.js";
 
-export const URLGetGudangC =
-  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudangc";
+export const URLGetGudangA =
+  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudanga";
 
-export const tableGudangC = `
+export const tableGudangA = `
 <tr>
 <td class="p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
   <div class="flex px-2 py-1">
@@ -45,8 +45,10 @@ export const tableGudangC = `
   <span class="text-xs font-semibold leading-tight text-slate-400">#DATE#</span>
 </td>
 <td class="p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-  <a href="javascript:;" class="text-xs font-semibold leading-tight text-slate-400">#EDIT#</a>
-  <a href="javascript:;" class="text-xs font-semibold leading-tight text-slate-400">#DELETE#</a>
+  <a type="button" href="edit_gudang_a.html?gudangaId=#EDIT#" class="text-xs font-semibold leading-tight text-slate-400"> <i class="fas fa-edit"></i></a>
+  <button onclick="deleteGudangA('#DELETE#')" class="text-xs font-semibold leading-tight text-slate-400">
+  <i class="fas fa-trash-alt"></i>
+</button>
 </td>
 </tr>
 `;
@@ -58,7 +60,7 @@ export function responseData(results) {
 
 export function isiRow(value) {
   const wibCreated = convertToWIB(value.date);
-  const gudangc = tableGudangC
+  const gudanga = tableGudangA
     .replace("#NAME#", value.name)
     .replace("#CATEGORY#", value.category)
     .replace("#QTY#", value.qty)
@@ -72,5 +74,5 @@ export function isiRow(value) {
     .replace("#DATE#", wibCreated)
     .replace("#EDIT#", value._id)
     .replace("#DELETE#", value._id);
-  addInner("tableGudangC", gudangc);
+  addInner("tableGudangA", gudanga);
 }

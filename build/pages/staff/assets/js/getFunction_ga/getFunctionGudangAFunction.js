@@ -1,4 +1,4 @@
-import { URLGetGudangC, responseData } from "./getFunctionGudangC.js";
+import { URLGetGudangA, responseData } from "./getFunctionGudangA.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const get = (target_url, responseFunction) => {
@@ -18,4 +18,4 @@ const get = (target_url, responseFunction) => {
     });
 };
 
-get(URLGetGudangC, responseData);
+get(URLGetGudangA, responseData);
