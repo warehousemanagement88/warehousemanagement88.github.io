@@ -44,12 +44,6 @@ export const tableGudangA = `
 <td class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
   <span class="text-xs font-semibold leading-tight text-slate-400">#DATE#</span>
 </td>
-<td class="p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-  <a type="button" href="edit_gudang_a.html?gudangaId=#EDIT#" class="text-xs font-semibold leading-tight text-slate-400"> <i class="fas fa-edit"></i></a>
-  <button onclick="deleteGudangA('#DELETE#')" class="text-xs font-semibold leading-tight text-slate-400">
-  <i class="fas fa-trash-alt"></i>
-</button>
-</td>
 </tr>
 `;
 
@@ -71,8 +65,6 @@ export function isiRow(value) {
     .replace("#COLOR#", value.color)
     .replace("#BREADCRUMBS#", value.breadcrumbs)
     .replace("#BRAND#", value.brand)
-    .replace("#DATE#", wibCreated)
-    .replace("#EDIT#", value._id)
-    .replace("#DELETE#", value._id);
+    .replace("#DATE#", wibCreated);
   addInner("tableGudangA", gudanga);
 }
