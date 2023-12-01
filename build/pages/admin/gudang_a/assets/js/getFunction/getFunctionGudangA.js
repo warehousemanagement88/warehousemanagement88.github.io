@@ -46,7 +46,7 @@ export const tableGudangA = `
 </td>
 <td class="p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
   <a type="button" href="edit_gudang_a.html?gudangaId=#EDIT#" class="text-xs font-semibold leading-tight text-slate-400"> <i class="fas fa-edit"></i></a>
-  <button onclick="deleteGudangA(#DELETE#)" class="text-xs font-semibold leading-tight text-slate-400">
+  <button onClick="deleteGudangA(#DELETE#)" class="text-xs font-semibold leading-tight text-slate-400">
   <i class="fas fa-trash-alt"></i>
 </button>
 </td>
