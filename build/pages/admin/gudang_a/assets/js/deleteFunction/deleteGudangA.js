@@ -5,7 +5,7 @@ const deleteGudangA = async (IDHAPUS) => {
   const authorizationToken = getCookie("Authorization");
 
   const isConfirmed = await Swal.fire({
-    title: "Apakah anda ingin menghapus data Gudang A?",
+    title: "Apakah Anda Ingin Menghapus Data Gudang A?",
     icon: "warning",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
@@ -32,7 +32,7 @@ const deleteGudangA = async (IDHAPUS) => {
       if (response.ok) {
         await Swal.fire({
           icon: "success",
-          title: "Berhasil Hapus Data Gudang A",
+          title: "Berhasil Menghapus Data Gudang A",
           showConfirmButton: false,
           timer: 1500,
         });
