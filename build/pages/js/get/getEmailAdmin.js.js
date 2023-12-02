@@ -21,7 +21,7 @@ const responseData = (results) => {
 
     addInner("emailUser", email);
   } else {
-    console.error("No admin data found");
+    console.error("No data found");
   }
 };
 
