@@ -1,6 +1,6 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 export const URLGetStaff =
-  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_staff";
+  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_user";
 
 export const tableStaff = `
 <tr>
