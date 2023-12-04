@@ -1,6 +1,6 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 export const URLGetStaff =
-  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_user";
+  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_staff";
 
 export const tableStaff = `
 <tr>
@@ -29,10 +29,10 @@ export function responseData(results) {
 
 export function isiRow(value) {
   const staff = tableStaff
-    .replace("#NAMALENGKAP#", value.name)
-    .replace("#JABATAN#", value.category)
-    .replace("#JENISKELAMIN#", value.qty)
-    .replace("#EMAIL#", value.sku)
-    .replace("#PASSWORD#", value.sellingprice);
+    .replace("#NAMALENGKAP#", value.namalengkap)
+    .replace("#JABATAN#", value.jabatan)
+    .replace("#JENISKELAMIN#", value.jeniskelamin)
+    .replace("#EMAIL#", value.email)
+    .replace("#PASSWORD#", value.password);
   addInner("tableStaff", staff);
 }
