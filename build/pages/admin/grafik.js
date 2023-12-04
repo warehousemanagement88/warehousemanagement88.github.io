@@ -37,7 +37,7 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
     });
 }
 show_chart(
-  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudangb",
+  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudanga",
   "myChart-a",
   "rgba(255, 99, 132, 0.2)",
   "total-gudanga"
