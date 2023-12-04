@@ -13,6 +13,7 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
 
       const products = temps.map((temp) => temp.name);
       const values = temps.map((temp) => temp.qty);
+      console.log(values);
       new Chart(ctx, {
         type: "bar",
         data: {
