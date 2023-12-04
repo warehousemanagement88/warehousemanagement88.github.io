@@ -6,7 +6,7 @@
     <title>404 - Page Not Found</title>
     <style>
       body {
-        background-color: #f4f4f4;
+        background-color: #ffdcdc; /* Warna merah muda */
         font-family: "Arial", sans-serif;
         margin: 0;
         padding: 0;
@@ -23,27 +23,56 @@
 
       h1 {
         font-size: 5em;
-        color: #333;
+        color: #e74c3c; /* Warna merah tua */
         margin: 0;
       }
 
       p {
         font-size: 1.2em;
-        color: #666;
+        color: #7f8c8d; /* Warna abu-abu tua */
       }
 
-      .icon-warehouse {
+      .icon-crying-face {
         font-size: 3em;
-        color: #3498db;
+        color: #3498db; /* Warna biru */
+      }
+
+      /* Style the container for a more visually appealing look */
+      .error-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Add some animation to the icon */
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-20px);
+        }
+        60% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .icon-crying-face {
+        animation: bounce 1s infinite;
       }
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="container error-container">
       <h1>404</h1>
-      <p>Page not found</p>
-      <p class="icon-warehouse">&#x1F3D3;</p>
-      <p>Oops! It Seems Like the Inventory is missing in our Warehouse.</p>
+      <p>Oops! The page you are looking for is lost in the warehouse.</p>
+      <p class="icon-crying-face">&#128557;</p>
+      <p>Don't worry, our team is searching high and low for it!</p>
     </div>
   </body>
 </html>
