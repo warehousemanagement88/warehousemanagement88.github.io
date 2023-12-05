@@ -1,5 +1,10 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
+
 export const URLGetStaff =
+  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_user";
+
+// Add the new URL
+export const URLGetStaffStaff =
   "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_staff";
 
 export const tableStaff = `
@@ -19,6 +24,9 @@ export const tableStaff = `
 <td class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
   <span class="text-xs font-semibold leading-tight text-slate-400">#PASSWORD#</span>
 </td>
+<td class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
+  <span class="text-xs font-semibold leading-tight text-slate-400">#ROLE#</span>
+</td>
 </tr>
 `;
 
@@ -29,10 +37,11 @@ export function responseData(results) {
 
 export function isiRow(value) {
   const staff = tableStaff
-    .replace("#NAMALENGKAP#", value.namalengkap)
-    .replace("#JABATAN#", value.jabatan)
-    .replace("#JENISKELAMIN#", value.jeniskelamin)
-    .replace("#EMAIL#", value.email)
-    .replace("#PASSWORD#", value.password);
+    .replace("#NAMALENGKAP#", value.staff.namalengkap)
+    .replace("#JABATAN#", value.staff.jabatan)
+    .replace("#JENISKELAMIN#", value.staff.jeniskelamin)
+    .replace("#EMAIL#", value.user.email)
+    .replace("#PASSWORD#", value.user.password)
+    .replace("#ROLE#", value.user.role);
   addInner("tableStaff", staff);
 }
