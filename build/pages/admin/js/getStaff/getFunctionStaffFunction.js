@@ -1,8 +1,4 @@
-import {
-  URLGetStaff,
-  URLGetStaffStaff,
-  responseData,
-} from "./getFunctionStaff.js";
+import { URLGetStaff, responseData } from "./getFunctionStaff.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const get = (target_url, responseFunction) => {
