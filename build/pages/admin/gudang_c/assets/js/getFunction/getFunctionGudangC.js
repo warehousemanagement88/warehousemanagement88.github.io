@@ -44,7 +44,7 @@ export const tableGudangC = `
 <td class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
   <span class="text-xs font-semibold leading-tight text-slate-400">#DATE#</span>
 </td>
-<td class="p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
+<td class="p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent text-center">
   <a type="button" href="edit_gudang_c.html?gudangcId=#EDIT#" class="text-xs font-semibold leading-tight text-slate-400"> <i class="fas fa-edit"></i></a>
   <button onclick="deleteGudangC('#DELETE#')" class="text-xs font-semibold leading-tight text-slate-400">
   <i class="fas fa-trash-alt"></i>
