@@ -20,7 +20,7 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
           labels: products,
           datasets: [
             {
-              label: "Data",
+              label: "Stock",
               data: values,
               borderWidth: 1,
               backgroundColor: backgroundColor,
