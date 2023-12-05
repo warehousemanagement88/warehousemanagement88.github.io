@@ -14,7 +14,7 @@ export const tableStaff = `
 <td class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
   <span class="text-xs font-semibold leading-tight text-slate-400">#ROLE#</span>
 </td>
-<td class="p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
+<td class="p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent text-center">
 <a type="button" href="detail_staff.html?staffId=#DETAIL#" class="text-xs font-semibold leading-tight text-slate-400"> <i class="fas fa-info-circle"></i></a>
 <a type="button" href="edit_staff.html?staffId=#EDIT#" class="text-xs font-semibold leading-tight text-slate-400"> <i class="fas fa-edit"></i></a>
 </button>
