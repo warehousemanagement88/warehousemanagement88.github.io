@@ -31,17 +31,22 @@ export const tableStaff = `
 `;
 
 export function responseData(results) {
-  console.log(results);
+  console.log("Response data:", results);
   results.forEach(isiRow);
 }
 
 export function isiRow(value) {
-  const staff = tableStaff
-    .replace("#NAMALENGKAP#", value.staff.namalengkap)
-    .replace("#JABATAN#", value.staff.jabatan)
-    .replace("#JENISKELAMIN#", value.staff.jeniskelamin)
-    .replace("#EMAIL#", value.user.email)
-    .replace("#PASSWORD#", value.user.password)
-    .replace("#ROLE#", value.user.role);
-  addInner("tableStaff", staff);
+  if (value && value.staff && value.user) {
+    const staff = tableStaff
+      .replace("#NAMALENGKAP#", value.staff.namalengkap || "")
+      .replace("#JABATAN#", value.staff.jabatan || "")
+      .replace("#JENISKELAMIN#", value.staff.jeniskelamin || "")
+      .replace("#EMAIL#", value.user.email || "")
+      .replace("#PASSWORD#", value.user.password || "")
+      .replace("#ROLE#", value.user.role || "");
+
+    addInner("tableStaff", staff);
+  } else {
+    console.error("Invalid data format or missing properties:", value);
+  }
 }
