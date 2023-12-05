@@ -2,7 +2,8 @@
 
 // Function to fetch staff details and populate the details section
 export function fetchAndPopulateStaffDetails(staffId) {
-  const url = `https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_staff/${staffId}`;
+  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_staff?id=" +
+    staffId;
 
   fetch(url, {
     method: "GET",

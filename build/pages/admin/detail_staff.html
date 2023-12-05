@@ -642,50 +642,34 @@
 
       <!-- end Navbar -->
 
-      <div class="flex flex-wrap -mx-3">
-        <div class="flex-none w-full max-w-full px-3">
-          <div
-            class="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-soft-xl rounded-2xl bg-clip-border"
-          >
-            <div
-              class="p-6 pb-0 mb-0 bg-white border-b-0 border-b-solid rounded-t-2xl border-b-transparent flex items-center justify-between"
-            >
-              <h6 style="font-size: 24px">Detail Staff</h6>
-            </div>
-            <div
-              style="
-                width: 400px;
-                background-color: #fff;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
-                overflow: hidden;
-                transition: transform 0.2s ease-in-out;
-              "
-              class="mx-auto mt-4 mb-4"
-            >
-              <div class="card-content p-4">
-                <!-- Details will be populated here dynamically -->
-                <p class="mb-2">
-                  <strong>Nama:</strong> <span id="detailNamaLengkap"></span>
-                </p>
-                <p class="mb-2">
-                  <strong>Jabatan:</strong> <span id="detailJabatan"></span>
-                </p>
-                <p class="mb-2">
-                  <strong>Jenis Kelamin:</strong>
-                  <span id="detailJenisKelamin"></span>
-                </p>
-                <!-- Add more details as needed -->
+      <div
+        class="mx-auto mt-6 mb-6 p-4 max-w-md bg-gradient-to-tl from-purple-700 to-pink-500 border rounded-xl shadow-soft-xl"
+      >
+        <h6 class="text-white text-xl">Detail Staff</h6>
+        <div
+          class="mx-auto mt-4 mb-4 w-64 bg-white rounded-lg overflow-hidden shadow-soft-md transition-transform duration-200 ease-in-out transform hover:scale-105"
+        >
+          <div class="p-4">
+            <!-- Details will be populated here dynamically -->
+            <p class="mb-2">
+              <strong>Nama :</strong> <span id="detailNamaLengkap"></span>
+            </p>
+            <p class="mb-2">
+              <strong>Jabatan :</strong> <span id="detailJabatan"></span>
+            </p>
+            <p class="mb-2">
+              <strong>Jenis Kelamin :</strong>
+              <span id="detailJenisKelamin"></span>
+            </p>
+            <!-- Add more details as needed -->
 
-                <!-- Cancel Button -->
-                <a
-                  href="./staff.html"
-                  class="inline-block px-6 py-3 mt-6 font-bold text-center text-white uppercase align-middle transition-all bg-transparent border-0 rounded-lg cursor-pointer active:opacity-85 hover:scale-102 hover:shadow-soft-xs leading-pro text-xs ease-soft-in tracking-tight-soft shadow-soft-md bg-150 bg-x-25 bg-gradient-to-tl from-gray-900 to-slate-800 hover:border-slate-700 hover:bg-slate-700 hover:text-white text-center"
-                >
-                  Cancel
-                </a>
-              </div>
-            </div>
+            <!-- Cancel Button -->
+            <a
+              href="./staff.html"
+              class="block px-2 py-1 mx-auto mt-4 font-bold text-white uppercase bg-gradient-to-tl from-gray-900 to-slate-800 rounded-lg text-center transition-all duration-200 ease-in hover:opacity-85 hover:scale-102 hover:shadow-soft-xs hover:bg-slate-700"
+            >
+              Cancel
+            </a>
           </div>
         </div>
       </div>
