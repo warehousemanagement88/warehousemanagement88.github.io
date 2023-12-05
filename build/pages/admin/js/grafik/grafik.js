@@ -1,11 +1,14 @@
-function show_total(target_url, totalId) {
-  fetch(target_url, {
+function fetchData(target_url) {
+  return fetch(target_url, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
-  })
-    .then((response) => response.json())
+  }).then((response) => response.json());
+}
+
+function show_total(target_url, totalId) {
+  fetchData(target_url)
     .then((result) => {
       document.getElementById(totalId).innerHTML = result.length;
     })
@@ -14,21 +17,8 @@ function show_total(target_url, totalId) {
     });
 }
 
-// Display total staff without a chart
-show_total(
-  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_staff",
-  "total-staff"
-);
-
-// Function for displaying a chart
 function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
-  fetch(target_url, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((response) => response.json())
+  return fetchData(target_url)
     .then((result) => {
       document.getElementById(warehouse_total).innerHTML = result.length;
       const temps = result;
@@ -60,24 +50,30 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
     });
 }
 
+// Display total staff without a chart
+show_total(
+  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_staff",
+  "total-staff"
+);
+
 // Display charts for warehouses
-show_chart(
-  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudanga",
-  "myChart-a",
-  "rgba(255, 99, 132, 0.2)",
-  "total-gudanga"
-);
-
-show_chart(
-  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudangb",
-  "myChart-b",
-  "rgba(54, 162, 235, 0.2)",
-  "total-gudangb"
-);
-
-show_chart(
-  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudangc",
-  "myChart-c",
-  "rgba(255, 206, 86, 0.2)",
-  "total-gudangc"
-);
+Promise.all([
+  show_chart(
+    "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudanga",
+    "myChart-a",
+    "rgba(255, 99, 132, 0.2)",
+    "total-gudanga"
+  ),
+  show_chart(
+    "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudangb",
+    "myChart-b",
+    "rgba(54, 162, 235, 0.2)",
+    "total-gudangb"
+  ),
+  show_chart(
+    "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudangc",
+    "myChart-c",
+    "rgba(255, 206, 86, 0.2)",
+    "total-gudangc"
+  ),
+]);
