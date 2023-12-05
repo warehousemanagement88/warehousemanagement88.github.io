@@ -52,7 +52,7 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
 
 // Display total staff without a chart
 show_total(
-  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_staff",
+  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_user",
   "total-staff"
 );
 
