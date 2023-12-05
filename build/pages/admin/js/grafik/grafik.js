@@ -10,6 +10,7 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
       document.getElementById(warehouse_total).innerHTML = result.length;
       const temps = result;
       const ctx = document.getElementById(idChart);
+      ctx.width = products.length * 200; // Sesuaikan dengan lebar yang dibutuhkan
 
       const products = temps.map((temp) => temp.name);
       const values = temps.map((temp) => temp.qty);
@@ -31,7 +32,8 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
           indexAxis: "y",
           scales: {
             y: {
-              maxBarThickness: 100, // Sesuaikan dengan kebutuhan
+              categoryPercentage: 0.5, // Nilai antara 0 dan 1
+              barPercentage: 0.9, // Nilai antara 0 dan 1
             },
           },
         },
