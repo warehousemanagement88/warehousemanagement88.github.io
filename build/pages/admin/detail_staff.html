@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Staff Detail</title>
+    <!-- Add your CSS styles or link to external stylesheets here -->
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+
+      .card {
+        width: 300px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card-content {
+        padding: 20px;
+      }
+
+      .card-content p {
+        margin: 0;
+        padding: 8px 0;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .card-content strong {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="staffDetails" class="card">
+      <div class="card-content">
+        <!-- Details will be populated here dynamically -->
+        <p><strong>Nama:</strong> <span id="detailNamaLengkap"></span></p>
+        <p><strong>Jabatan:</strong> <span id="detailJabatan"></span></p>
+        <p>
+          <strong>Jenis Kelamin:</strong> <span id="detailJenisKelamin"></span>
+        </p>
+        <!-- Add more details as needed -->
+      </div>
+    </div>
+
+    <!-- Add your JavaScript file for fetching and populating details -->
+    <script type="module" src="./js/getStaff/detail_staff.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Extract staffId from the URL
+        const staffId = getStaffIdFromURL();
+
+        // Call the function to fetch and populate details
+        fetchAndPopulateStaffDetails(staffId);
+      });
+
+      // Function to extract staff ID from the URL
+      function getStaffIdFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get("staffId");
+      }
+    </script>
+  </body>
+</html>
