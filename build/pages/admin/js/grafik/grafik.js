@@ -7,13 +7,13 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
   })
     .then((response) => response.json())
     .then((result) => {
-      document.getElementById(warehouse_total).innerHTML = result.length;
       const temps = result;
       const ctx = document.getElementById(idChart);
 
       const products = temps.map((temp) => temp.name);
       const values = temps.map((temp) => temp.qty);
-      console.log(values);
+      console.log(products); // Periksa data label
+
       new Chart(ctx, {
         type: "bar",
         data: {
@@ -32,8 +32,8 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
           scales: {
             xAxes: [
               {
-                categoryPercentage: 0.6, // Sesuaikan nilai ini sesuai kebutuhan
-                barPercentage: 0.8, // Sesuaikan nilai ini sesuai kebutuhan
+                categoryPercentage: 0.6,
+                barPercentage: 0.8,
               },
             ],
           },
