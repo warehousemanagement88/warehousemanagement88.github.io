@@ -29,6 +29,14 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
         },
         options: {
           indexAxis: "y",
+          scales: {
+            xAxes: [
+              {
+                categoryPercentage: 0.6, // Sesuaikan nilai ini sesuai kebutuhan
+                barPercentage: 0.8, // Sesuaikan nilai ini sesuai kebutuhan
+              },
+            ],
+          },
         },
       });
     })
@@ -36,18 +44,22 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
       console.log("error", error);
     });
 }
+
+// Panggil fungsi show_chart untuk setiap grafik
 show_chart(
   "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudanga",
   "myChart-a",
   "rgba(255, 99, 132, 0.2)",
   "total-gudanga"
 );
+
 show_chart(
   "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudangb",
   "myChart-b",
   "rgba(54, 162, 235, 0.2)",
   "total-gudangb"
 );
+
 show_chart(
   "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudangc",
   "myChart-c",
