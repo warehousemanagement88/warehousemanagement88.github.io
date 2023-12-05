@@ -31,7 +31,7 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
           indexAxis: "y",
           scales: {
             y: {
-              maxBarThickness: 50, // Sesuaikan dengan kebutuhan
+              maxBarThickness: 100, // Sesuaikan dengan kebutuhan
             },
           },
         },
