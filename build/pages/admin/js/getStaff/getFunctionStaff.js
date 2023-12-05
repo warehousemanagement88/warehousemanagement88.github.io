@@ -36,12 +36,18 @@ export function responseData(results) {
 }
 
 export function isiRow(value) {
-  const staff = tableStaff
-    .replace("#NAMALENGKAP#", value.staff.namalengkap)
-    .replace("#JABATAN#", value.staff.jabatan)
-    .replace("#JENISKELAMIN#", value.jeniskelamin)
-    .replace("#EMAIL#", value.user.email)
-    .replace("#PASSWORD#", value.user.password)
-    .replace("#ROLE#", value.user.role);
-  addInner("tableStaff", staff);
+  // Check if value and value.staff are defined
+  if (value && value.staff) {
+    const staff = tableStaff
+      .replace("#NAMALENGKAP#", value.staff.namalengkap || "")
+      .replace("#JABATAN#", value.staff.jabatan || "")
+      .replace("#JENISKELAMIN#", value.jeniskelamin || "")
+      .replace("#EMAIL#", value.user.email || "")
+      .replace("#PASSWORD#", value.user.password || "")
+      .replace("#ROLE#", value.user.role || "");
+
+    addInner("tableStaff", staff);
+  } else {
+    console.error("Invalid data format:", value);
+  }
 }
