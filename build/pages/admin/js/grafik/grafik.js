@@ -12,8 +12,6 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
       const ctx = document.getElementById(idChart);
 
       const products = temps.map((temp) => temp.name);
-      ctx.width = products.length * 200; // Sesuaikan dengan lebar yang dibutuhkan
-
       const values = temps.map((temp) => temp.qty);
       console.log(values);
       new Chart(ctx, {
@@ -22,7 +20,7 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
           labels: products,
           datasets: [
             {
-              label: "Stock",
+              label: "Data",
               data: values,
               borderWidth: 1,
               backgroundColor: backgroundColor,
@@ -31,12 +29,6 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
         },
         options: {
           indexAxis: "y",
-          scales: {
-            y: {
-              categoryPercentage: 0.5, // Nilai antara 0 dan 1
-              barPercentage: 0.9, // Nilai antara 0 dan 1
-            },
-          },
         },
       });
     })
@@ -44,8 +36,6 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
       console.log("error", error);
     });
 }
-
-// Panggil fungsi untuk menampilkan grafik untuk masing-masing gudang
 show_chart(
   "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudanga",
   "myChart-a",
