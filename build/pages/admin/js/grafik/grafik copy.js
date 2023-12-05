@@ -1,26 +1,3 @@
-function show_total(target_url, totalId) {
-  fetch(target_url, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((response) => response.json())
-    .then((result) => {
-      document.getElementById(totalId).innerHTML = result.length;
-    })
-    .catch((error) => {
-      console.log("error", error);
-    });
-}
-
-// Display total staff without a chart
-show_total(
-  "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_staff",
-  "total-staff"
-);
-
-// Function for displaying a chart
 function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
   fetch(target_url, {
     method: "GET",
@@ -43,7 +20,7 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
           labels: products,
           datasets: [
             {
-              label: "Data Stock",
+              label: "Data",
               data: values,
               borderWidth: 1,
               backgroundColor: backgroundColor,
@@ -59,22 +36,18 @@ function show_chart(target_url, idChart, backgroundColor, warehouse_total) {
       console.log("error", error);
     });
 }
-
-// Display charts for warehouses
 show_chart(
   "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudanga",
   "myChart-a",
   "rgba(255, 99, 132, 0.2)",
   "total-gudanga"
 );
-
 show_chart(
   "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudangb",
   "myChart-b",
   "rgba(54, 162, 235, 0.2)",
   "total-gudangb"
 );
-
 show_chart(
   "https://asia-southeast2-warehousemanagement88.cloudfunctions.net/warehouse_gudangc",
   "myChart-c",
