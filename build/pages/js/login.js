@@ -43,9 +43,9 @@ const responseData = (result) => {
     }).then(() => {
       // Redirect based on the user role
       if (result.role === "staff") {
-        window.location.href = "./staff/dashboard_staff.html";
+        window.location.href = "./staff/file/dashboard_staff.html";
       } else if (result.role === "admin") {
-        window.location.href = "./admin/dashboard.html";
+        window.location.href = "./admin/file/dashboard.html";
       } else {
         // Handle other roles or scenarios if needed
         // For example, redirect to a default page or show an error message
