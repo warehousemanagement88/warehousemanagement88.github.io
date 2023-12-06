@@ -1,0 +1,37 @@
+import { urlFetch } from "./urlDetailUser.js";
+import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
+import { responseStaff } from "./detailStaff.js";
+import { show } from "https://jscroot.github.io/element/croot.js";
+
+function get(target_url) {
+  show("skeletonLoader");
+
+  const myHeaders = new Headers();
+  myHeaders.append("Authorization", getCookie("Authorization"));
+
+  var requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow",
+  };
+
+  fetch(target_url, requestOptions)
+    .then((response) => response.text())
+    .then((result) => {
+      const parsedResult = JSON.parse(result);
+
+      // Periksa peran berdasarkan hierarki objek
+      const role = parsedResult.akun ? parsedResult.akun.role : null;
+
+      // Pilih fungsi respons berdasarkan peran
+      if (role === "admin") {
+        responseStaff(parsedResult);
+      }
+    })
+    .catch((error) => {
+      console.log("error", error);
+    });
+}
+
+// Contoh pemanggilan metode get
+get(urlFetch);
