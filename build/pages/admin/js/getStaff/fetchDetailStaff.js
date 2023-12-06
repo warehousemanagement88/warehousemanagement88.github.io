@@ -1,11 +1,8 @@
-import { urlFetch } from "./urlDetailUser.js";
+import { urlFetch } from "./urlDetailStaff.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { responseStaff } from "./detailStaff.js";
-import { show } from "https://jscroot.github.io/element/croot.js";
+import { responseDataStaff } from "./detailStaff.js";
 
 function get(target_url) {
-  show("skeletonLoader");
-
   const myHeaders = new Headers();
   myHeaders.append("Authorization", getCookie("Authorization"));
 
@@ -25,7 +22,7 @@ function get(target_url) {
 
       // Pilih fungsi respons berdasarkan peran
       if (role === "admin") {
-        responseStaff(parsedResult);
+        responseDataStaff(parsedResult);
       }
     })
     .catch((error) => {

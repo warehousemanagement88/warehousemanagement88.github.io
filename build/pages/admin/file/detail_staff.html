@@ -814,29 +814,7 @@
     src="../../../assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5"
     async
   ></script>
-  <!-- <script
-    type="module"
-    src="./js/getStaff/getFunctionStaffFunction.js"
-  ></script> -->
-  <script
-    type="module"
-    src="https://cdn.jsdelivr.net/gh/warehousemanagement88/js_warehouse@0.0.2/logOut.js"
-  ></script>
-  <script type="module" src="../js/getStaff/detail_staff.js"></script>
+<script type="module" src="../js/getStaff/fetchDetailStaff.js">
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Extract staffId from the URL
-      const staffId = getStaffIdFromURL();
-
-      // Call the function to fetch and populate details
-      fetchAndPopulateStaffDetails(staffId);
-    });
-
-    // Function to extract staff ID from the URL
-    function getStaffIdFromURL() {
-      const urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get("staffId");
-    }
-  </script>
+</script>
 </html>
