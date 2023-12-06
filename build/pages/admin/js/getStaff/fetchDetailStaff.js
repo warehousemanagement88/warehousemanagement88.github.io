@@ -18,12 +18,10 @@ function get(target_url) {
       const parsedResult = JSON.parse(result);
 
       // Periksa peran berdasarkan hierarki objek
-      const role = parsedResult.akun ? parsedResult.akun.role : null;
 
       // Pilih fungsi respons berdasarkan peran
-      if (role === "admin") {
-        responseDataStaff(parsedResult);
-      }
+
+      responseDataStaff(parsedResult);
     })
     .catch((error) => {
       console.log("error", error);
