@@ -34,7 +34,7 @@ export function responseDataStaff(results) {
   isiRowStaff(results);
 }
 
-export function isiRowMahasiswa(value) {
+export function isiRowStaff(value) {
   const content = dataStaff
     .replace("#NAMALENGKAP#", value.namalengkap)
     .replace("#JABATAN#", value.jabatan)
