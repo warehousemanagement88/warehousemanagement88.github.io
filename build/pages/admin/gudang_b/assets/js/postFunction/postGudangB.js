@@ -28,7 +28,7 @@ const responseData = (result) => {
     Swal.fire({
       icon: "success",
       title: "Insert Successful",
-      text: result.message,
+      text: "Berhasil Insert Gudang B",
     }).then(() => {
       window.location.reload();
     });
