@@ -10,13 +10,13 @@ class="mx-auto mt-6 mb-6 p-4 max-w-md bg-gradient-to-tl from-purple-700 to-pink-
 >
   <div class="p-4">
     <p class="mb-2">
-      <strong>Nama Lengkap :</strong>
+      <strong>Nama Lengkap : #NAMALENGKAP#</strong>
     </p>
     <p class="mb-2">
-      <strong>Jabatan :</strong>
+      <strong>Jabatan : #JABATAN#</strong>
     </p>
     <p class="mb-2">
-      <strong>Jenis Kelamin :</strong>
+      <strong>Jenis Kelamin : #JENISKELAMIN#</strong>
     </p>
     <a
       href="./staff.html"
@@ -39,5 +39,5 @@ export function isiRowMahasiswa(value) {
     .replace("#NAMALENGKAP#", value.namalengkap)
     .replace("#JABATAN#", value.jabatan)
     .replace("#JENISKELAMIN#", value.jeniskelamin);
-  addInner("detailUser", content);
+  addInner("detailStaff", content);
 }
