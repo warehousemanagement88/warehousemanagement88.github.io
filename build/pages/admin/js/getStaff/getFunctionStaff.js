@@ -16,7 +16,6 @@ export const tableStaff = `
 </td>
 <td class="p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent text-center">
 <a type="button" href="detail_staff.html?staffId=#DETAIL#" class="text-xs font-semibold leading-tight text-slate-400"> <i class="fas fa-info-circle"></i></a>
-<a type="button" href="edit_staff.html?staffId=#EDIT#" class="text-xs font-semibold leading-tight text-slate-400"> <i class="fas fa-edit"></i></a>
 </button>
 </tr>
 `;
@@ -31,7 +30,6 @@ export function isiRow(value) {
     .replace("#EMAIL#", value.email)
     .replace("#PASSWORD#", value.password)
     .replace("#ROLE#", value.role)
-    .replace("#DETAIL#", value._id)
-    .replace("#EDIT#", value._id);
+    .replace("#DETAIL#", value._id);
   addInner("tableStaff", staff);
 }
