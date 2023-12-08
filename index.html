@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .loading {
+        text-align: center;
+      }
+
+      .loading i {
+        font-size: 2em; /* Sesuaikan ukuran ikon loading */
+      }
+
+      #content {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Loading element with Font Awesome icon -->
+    <div class="loading">
+      <i class="fas fa-spinner fa-spin"></i>
+      <p>Loading...</p>
+    </div>
+
+    <!-- Optional: Add some content or message for users -->
+    <div id="content"></div>
+
+    <!-- Redirect to sign-in.html after a simulated loading time -->
+    <script>
+      // Simulate loading for a few seconds (you can adjust the time)
+      setTimeout(function () {
+        document.getElementById("content").style.display = "block";
+        document.querySelector(".loading").style.display = "none";
+        window.location.href = "build/pages/sign-in.html";
+      }, 3000); // 3000 milliseconds = 3 seconds (adjust as needed)
+    </script>
+  </body>
+</html>
