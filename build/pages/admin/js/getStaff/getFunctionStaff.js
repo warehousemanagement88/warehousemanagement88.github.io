@@ -9,7 +9,7 @@ export const tableStaff = `
   <span class="text-xs font-semibold leading-tight text-slate-400">#EMAIL#</span>
 </td>
 <td class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-  <span class="text-xs font-semibold leading-tight text-slate-400">#PASSWORD#</span>
+  <span class="text-xs font-semibold leading-tight text-slate-400">#NOHP#</span>
 </td>
 <td class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
   <span class="text-xs font-semibold leading-tight text-slate-400">#ROLE#</span>
@@ -28,7 +28,7 @@ export function responseData(results) {
 export function isiRow(value) {
   const staff = tableStaff
     .replace("#EMAIL#", value.email)
-    .replace("#PASSWORD#", value.password)
+    .replace("#NOHP#", value.nohp)
     .replace("#ROLE#", value.role)
     .replace("#DETAIL#", value._id);
   addInner("tableStaff", staff);
