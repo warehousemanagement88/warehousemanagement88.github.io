@@ -29,6 +29,7 @@
       href="../../../assets/css/soft-ui-dashboard-tailwind.css?v=1.0.5"
       rel="stylesheet"
     />
+    <link href="../assets/css/dropdown.css" rel="stylesheet" />
 
     <!-- Nepcha Analytics (nepcha.com) -->
     <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
@@ -176,12 +177,12 @@
               </div>
               <span
                 class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft"
-                >Warehouse A</span
+                >Warehouse</span
               >
             </a>
           </li>
 
-          <li class="mt-0.5 w-full">
+          <!-- <li class="mt-0.5 w-full">
             <a
               class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
               href="../../../pages/admin/gudang_b/tables_GudangB.html"
@@ -285,7 +286,7 @@
                 >Warehouse C</span
               >
             </a>
-          </li>
+          </li> -->
 
           <li class="w-full mt-4">
             <h6
@@ -647,6 +648,18 @@
             <div
               class="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-soft-xl rounded-2xl bg-clip-border"
             >
+              <div class="dropdown inline-block p-6 pb-0 mb-0">
+                <button
+                  class="dropdown-btn inline-block px-4 py-2 font-bold text-center text-white uppercase align-middle transition-all ease-in border-0 rounded-lg select-none shadow-soft-md bg-150 bg-x-25 leading-pro text-xs bg-gradient-to-tl from-purple-700 to-pink-500 hover:shadow-soft-2xl hover:scale-102"
+                >
+                  Warehouse Options
+                </button>
+                <div class="dropdown-content">
+                  <a href="../gudang_a/tables_GudangA.html">Warehouse A</a>
+                  <a href="../gudang_b/tables_GudangB.html">Warehouse B</a>
+                  <a href="../gudang_c/tables_GudangC.html">Warehouse C</a>
+                </div>
+              </div>
               <div
                 class="p-6 pb-0 mb-0 bg-white border-b-0 border-b-solid rounded-t-2xl border-b-transparent flex items-center justify-between"
               >
@@ -906,15 +919,15 @@
   ></script>
   <script
     type="module"
-    src="https://cdn.jsdelivr.net/gh/warehousemanagement88/js_warehouse@0.1.8/admin/gudang_a/assets/js/getFunction/getFunctionGudangAFunction.js"
+    src="https://cdn.jsdelivr.net/gh/warehousemanagement88/js_warehouse@0.2.1/admin/gudang_a/assets/js/getFunction/getFunctionGudangAFunction.js"
   ></script>
   <script
     type="module"
-    src="https://cdn.jsdelivr.net/gh/warehousemanagement88/js_warehouse@0.1.8/admin/gudang_a/assets/js/deleteFunction/deleteGudangA.js"
+    src="https://cdn.jsdelivr.net/gh/warehousemanagement88/js_warehouse@0.2.1/admin/gudang_a/assets/js/deleteFunction/deleteGudangA.js"
   ></script>
   <script
     type="module"
-    src="https://cdn.jsdelivr.net/gh/warehousemanagement88/js_warehouse@0.1.8/logOut.js"
+    src="https://cdn.jsdelivr.net/gh/warehousemanagement88/js_warehouse@0.2.1/logOut.js"
   ></script>
   <script>
     function exportToExcel() {
@@ -924,6 +937,28 @@
       XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
       XLSX.writeFile(wb, "warehouse_data.xlsx");
     }
+  </script>
+  <script>
+    // JavaScript for simple dropdown
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdownBtn = document.querySelector(".dropdown-btn");
+      const dropdownContent = document.querySelector(".dropdown-content");
+
+      dropdownBtn.addEventListener("click", function () {
+        dropdownContent.classList.toggle("show");
+      });
+
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropdown-btn")) {
+          const dropdowns = document.getElementsByClassName("dropdown-content");
+          for (const dropdown of dropdowns) {
+            if (dropdown.classList.contains("show")) {
+              dropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    });
   </script>
   <!-- <script
     type="module"

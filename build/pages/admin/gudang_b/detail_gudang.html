@@ -98,11 +98,11 @@
                                 </g>
                             </svg>
                         </div>
-                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Warehouse A</span>
+                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Warehouse</span>
                     </a>
                 </li>
 
-                <li class="mt-0.5 w-full">
+                <!-- <li class="mt-0.5 w-full">
                     <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
                         href="../../../pages/admin/gudang_b/tables_GudangB.html">
                         <div
@@ -161,7 +161,7 @@
                         </div>
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Warehouse C</span>
                     </a>
-                </li>
+                </li> -->
 
                 <li class="w-full mt-4">
                     <h6 class="pl-6 ml-2 font-bold leading-tight uppercase text-xs opacity-60">
@@ -406,9 +406,29 @@
             Cancel
         </a>
         <!-- end Navbar -->
-        <div id="detailGudang">
-
+        <div id="detailGudangs">
         </div>
+        <div id="detailGudang">
+        </div>
+        <div class="flex flex-wrap mt-6 -mx-3">
+            <div class="w-full px-3 mb-6 lg:mb-0 lg:w-full">
+              <!-- Use lg:w-full for full width on larger screens -->
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white shadow-soft-xl rounded-2xl bg-clip-border"
+              >
+                <div class="flex-auto p-4">
+                  <div class="flex flex-wrap -mx-3">
+                    <h5 class="mr-3 mb-0 text-center w-full">Warehouse</h5>
+                    <canvas
+                      id="myChart-a"
+                      class="w-full"
+                      style="height: 250px"
+                    ></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
     </main>
     <div fixed-plugin>
         <a fixed-plugin-button
@@ -527,7 +547,9 @@
 <!-- main script file  -->
 <script src="../../../assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5" async></script>
 <script type="module"
-    src="https://cdn.jsdelivr.net/gh/warehousemanagement88/js_warehouse@0.1.8/admin/gudang_a/assets/js/getFunction/fetchDetailGudang.js"></script>
+    src="https://cdn.jsdelivr.net/gh/warehousemanagement88/js_warehouse@0.2.1/admin/gudang_a/assets/js/getFunction/fetchDetailGudang.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/warehousemanagement88/js_warehouse@0.2.1/admin/js/grafik/detailGrafik.js"></script>
 <!-- <script type="module" src="../js/getStaff/fetchDetailStaff.js"></script> -->
 
 </html>
